@@ -1,7 +1,8 @@
 package ru.ya.rrmstu.me.entities;
 
 /**
- * Created by RRM on 21/03/2018.
+ * @author Rasuli Ramin
+ * @version 1.0
  */
 public class InstitutionType {
     private int id;

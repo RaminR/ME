@@ -10,15 +10,14 @@
         <!--jdbc:mysql://localhost:3306/MinistryEducation?zeroDateTimeBehavior=convertToNull-->
         <!--</property>-->
         <property name="hibernate.show_sql">true</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/MinistryEducation</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/ministry_education</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <!--<property name="hibernate.current_session_context_class">thread</property>-->
         <!--<property name="hibernate.connection.datasource">jdbc/ME</property>-->
         <!--<property name="hibernate.connection.username">root</property>-->
         <!--<property name="hibernate.connection.password">root</property>-->
 
-        <mapping resource="ru.ya.rrmstu.me.entities/Institution.hbm.xml"/>
-        <mapping resource="ru.ya.rrmstu.me.entities/InstitutionType.hbm.xml"/>
+
         <mapping resource="ru.ya.rrmstu.me.entities/Institution.hbm.xml"/>
         <mapping resource="ru.ya.rrmstu.me.entities/InstitutionType.hbm.xml"/>
         <!-- <property name="connection.username"/> -->

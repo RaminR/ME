@@ -1,9 +1,8 @@
 package ru.ya.rrmstu.me.entities;
 
-import javax.persistence.OneToOne;
-
 /**
- * Created by RRM on 21/03/2018.
+ * @author Rasuli Ramin
+ * @version 1.0
  */
 public class Institution {
     private int id;
