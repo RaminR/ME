@@ -6,14 +6,22 @@ package ru.ya.rrmstu.me.entities;
 public class Institution {
     private long idInstitution;
     private String nameInstitution;
-    private InstitutionType institution_type;
+    private InstitutionType institutionType;
+
+    public InstitutionType getInstitutionType() {
+        return institutionType;
+    }
+
+    public void setInstitutionType(InstitutionType institutionType) {
+        this.institutionType = institutionType;
+    }
 
     public InstitutionType getInstitution_type() {
-        return institution_type;
+        return institutionType;
     }
 
     public void setInstitution_type(InstitutionType institution_type) {
-        this.institution_type = institution_type;
+        this.institutionType = institution_type;
     }
 
     public long getIdInstitution() {

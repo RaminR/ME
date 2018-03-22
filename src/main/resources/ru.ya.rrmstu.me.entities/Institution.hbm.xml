@@ -9,7 +9,7 @@
         <property name="nameInstitution" column="name_institution"/>
 
         <many-to-one class="ru.ya.rrmstu.me.entities.InstitutionType" fetch="join" lazy="false"
-                     name="institution_type">
+                     name="institutionType">
             <column name="institution_type_id" not-null="true"/>
         </many-to-one>
     </class>
