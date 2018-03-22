@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.ya.rrmstu.me.dao.interfaces.InstitutionDAO;
 import ru.ya.rrmstu.me.entities.Institution;
-import ru.ya.rrmstu.me.entities.InstitutionType;
 
 import java.util.List;
 
@@ -20,15 +19,15 @@ public class InstitutionDAOImpl implements InstitutionDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    private List<Institution> institutionTypeList;
+    private List<Institution> institutionList;
 
 
     @Transactional
     public List<Institution> getInstitutions() {
-        institutionTypeList = (List<Institution>) sessionFactory.getCurrentSession()
+        institutionList = (List<Institution>) sessionFactory.getCurrentSession()
                 .createCriteria(Institution.class)
                 .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 
-        return institutionTypeList;
+        return institutionList;
     }
 }

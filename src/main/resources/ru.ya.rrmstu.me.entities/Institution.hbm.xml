@@ -1,11 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
     <class name="ru.ya.rrmstu.me.entities.Institution" table="institution" schema="ministry_education">
-        <id name="id" column="id"/>
-        <property name="name" column="name"/>
+        <id name="idInstitution" column="id_institution"/>
+        <property name="nameInstitution" column="name_institution"/>
+
+        <many-to-one class="ru.ya.rrmstu.me.entities.InstitutionType" fetch="join" lazy="false"
+                     name="institution_type">
+            <column name="institution_type_id" not-null="true"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
     <class name="ru.ya.rrmstu.me.entities.InstitutionType" table="institution_type" schema="ministry_education">
-        <id name="id" column="id"/>
-        <property name="name" column="name"/>
-        <property name="description" column="description"/>
+        <id name="idInstitutionType" column="id_institution_type"/>
+        <property name="nameInstitutionType" column="name_institution_type"/>
+        <property name="descriptionInstitutionType" column="description_institution_type"/>
     </class>
 </hibernate-mapping>

@@ -1,36 +1,35 @@
 package ru.ya.rrmstu.me.entities;
 
 /**
- * @author Rasuli Ramin
- * @version 1.0
+ * Created by RRM on 22/03/2018.
  */
 public class InstitutionType {
-    private int id;
-    private String name;
-    private String description;
+    private long idInstitutionType;
+    private String nameInstitutionType;
+    private String descriptionInstitutionType;
 
-    public int getId() {
-        return id;
+    public long getIdInstitutionType() {
+        return idInstitutionType;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdInstitutionType(long idInstitutionType) {
+        this.idInstitutionType = idInstitutionType;
     }
 
-    public String getName() {
-        return name;
+    public String getNameInstitutionType() {
+        return nameInstitutionType;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameInstitutionType(String nameInstitutionType) {
+        this.nameInstitutionType = nameInstitutionType;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescriptionInstitutionType() {
+        return descriptionInstitutionType;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptionInstitutionType(String descriptionInstitutionType) {
+        this.descriptionInstitutionType = descriptionInstitutionType;
     }
 
     @Override
@@ -40,18 +39,20 @@ public class InstitutionType {
 
         InstitutionType that = (InstitutionType) o;
 
-        if (id != that.id) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+        if (idInstitutionType != that.idInstitutionType) return false;
+        if (nameInstitutionType != null ? !nameInstitutionType.equals(that.nameInstitutionType) : that.nameInstitutionType != null)
+            return false;
+        if (descriptionInstitutionType != null ? !descriptionInstitutionType.equals(that.descriptionInstitutionType) : that.descriptionInstitutionType != null)
+            return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
+        int result = (int) (idInstitutionType ^ (idInstitutionType >>> 32));
+        result = 31 * result + (nameInstitutionType != null ? nameInstitutionType.hashCode() : 0);
+        result = 31 * result + (descriptionInstitutionType != null ? descriptionInstitutionType.hashCode() : 0);
         return result;
     }
 }

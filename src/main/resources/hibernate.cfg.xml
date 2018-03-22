@@ -17,7 +17,6 @@
         <!--<property name="hibernate.connection.username">root</property>-->
         <!--<property name="hibernate.connection.password">root</property>-->
 
-
         <mapping resource="ru.ya.rrmstu.me.entities/Institution.hbm.xml"/>
         <mapping resource="ru.ya.rrmstu.me.entities/InstitutionType.hbm.xml"/>
         <!-- <property name="connection.username"/> -->

@@ -1,27 +1,35 @@
 package ru.ya.rrmstu.me.entities;
 
 /**
- * @author Rasuli Ramin
- * @version 1.0
+ * Created by RRM on 22/03/2018.
  */
 public class Institution {
-    private int id;
-    private String name;
+    private long idInstitution;
+    private String nameInstitution;
+    private InstitutionType institution_type;
 
-    public int getId() {
-        return id;
+    public InstitutionType getInstitution_type() {
+        return institution_type;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setInstitution_type(InstitutionType institution_type) {
+        this.institution_type = institution_type;
     }
 
-    public String getName() {
-        return name;
+    public long getIdInstitution() {
+        return idInstitution;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIdInstitution(long idInstitution) {
+        this.idInstitution = idInstitution;
+    }
+
+    public String getNameInstitution() {
+        return nameInstitution;
+    }
+
+    public void setNameInstitution(String nameInstitution) {
+        this.nameInstitution = nameInstitution;
     }
 
     @Override
@@ -31,16 +39,17 @@ public class Institution {
 
         Institution that = (Institution) o;
 
-        if (id != that.id) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (idInstitution != that.idInstitution) return false;
+        if (nameInstitution != null ? !nameInstitution.equals(that.nameInstitution) : that.nameInstitution != null)
+            return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        int result = (int) (idInstitution ^ (idInstitution >>> 32));
+        result = 31 * result + (nameInstitution != null ? nameInstitution.hashCode() : 0);
         return result;
     }
 }

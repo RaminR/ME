@@ -1,7 +1,6 @@
 package ru.ya.rrmstu.me.dao.interfaces;
 
 import ru.ya.rrmstu.me.entities.Institution;
-import ru.ya.rrmstu.me.entities.InstitutionType;
 
 import java.util.List;
 
